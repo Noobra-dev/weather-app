@@ -23,7 +23,7 @@ const Weather = () => {
 
     const forecastCall = () => {
         // e.preventDefault();
-        axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${data}&units=metric&APPID=d8d3f8d3bedcf8adbc2af7b48e6ca3d4`)
+        axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${data}&units=metric&APPID=d8d3f8d3bedcf8adbc2af7b48e6ca3d4`)
             .then(
                 (res) => {
                     console.log(res.data)
@@ -89,8 +89,6 @@ const Weather = () => {
                                     <ul class="list-unstyled mt-3 mb-4">
                                         <li>Longitude : {city?.coord?.lon}</li>
                                         <li>Latitude : {city?.coord?.lat}</li>
-                                        <li>Sunrise : {city?.sys?.sunrise}</li>
-                                        <li>Sunset : {city?.sys?.sunset}</li>
                                     </ul>
                                     {/* <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> */}
                                 </div>
